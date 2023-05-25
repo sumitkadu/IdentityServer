@@ -1,0 +1,7 @@
+.vs
+src/Api/bin
+src/Api/obj
+src/IdentityServer/bin
+src/IdentityServer/obj
+src/Client/bin
+src/Client/obj
