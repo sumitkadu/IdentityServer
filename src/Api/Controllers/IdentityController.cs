@@ -1,5 +1,10 @@
-using Microsoft.AspNetCore.Authorization;
+// Copyright (c) Duende Software. All rights reserved.
+// See LICENSE in the project root for license information.
+
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
+namespace Api.Controllers;
 
 [Route("identity")]
 [Authorize]
