@@ -5,3 +5,5 @@ src/IdentityServer/bin
 src/IdentityServer/obj
 src/Client/bin
 src/Client/obj
+src/WebClient/bin
+src/WebClient/obj
