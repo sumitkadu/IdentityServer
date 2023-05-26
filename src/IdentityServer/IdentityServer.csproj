@@ -4,12 +4,9 @@
     <TargetFramework>netcoreapp7.0</TargetFramework>
   </PropertyGroup>
   
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'SelfHost' " />
   <ItemGroup>
-    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+    <PackageReference Include="IdentityServer4" Version="4.0.0" />
 
-    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
   </ItemGroup>
 </Project>

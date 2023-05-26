@@ -1,19 +1,30 @@
-﻿using IdentityServer4.Models;
+﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
+
+
+using IdentityServer4.Models;
 using System.Collections.Generic;
 
-public static class Config
+namespace IdentityServer
 {
-    public static IEnumerable<ApiScope> ApiScopes =>
-        new List<ApiScope>
-        {
-            new ApiScope("api1", "My API")
-        };
-
-
-    public static IEnumerable<Client> Clients =>
-    new List<Client>
+    public static class Config
     {
-        new Client
+        public static IEnumerable<IdentityResource> IdentityResources =>
+            new IdentityResource[]
+            { 
+                new IdentityResources.OpenId()
+            };
+
+        public static IEnumerable<ApiScope> ApiScopes =>
+            new ApiScope[]
+            {
+                new ApiScope("api1", "My API")
+             };
+
+        public static IEnumerable<Client> Clients =>
+            new Client[] 
+            {
+                new Client
         {
             ClientId = "client",
 
@@ -29,5 +40,6 @@ public static class Config
             // scopes that client has access to
             AllowedScopes = { "api1" }
         }
-    };
+             };
+    }
 }
