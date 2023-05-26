@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "C8DjtMzZoG19SK48oFyNMpYrVoZ2eCjGHQT0AdI7t/6/CLoYFg0Zz1uV8LCjRgtLPHW/e8NwKE7orzgO8IApfQ==",
+  "success": true,
+  "projectFilePath": "/Users/sumitkadu/Projects/IdentityServer/src/WebClient/WebClient.csproj",
+  "expectedPackageFiles": [
+    "/Users/sumitkadu/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/6.0.1/microsoft.aspnetcore.authentication.openidconnect.6.0.1.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.10.0/microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.identitymodel.logging/6.10.0/microsoft.identitymodel.logging.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.identitymodel.tokens/6.10.0/microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/system.identitymodel.tokens.jwt/6.10.0/system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/sumitkadu/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.11/microsoft.netcore.app.host.osx-x64.6.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

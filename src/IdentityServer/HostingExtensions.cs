@@ -10,11 +10,12 @@ internal static class HostingExtensions
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
         // uncomment, if you want to add an MVC-based UI
-        // builder.Services.AddRazorPages();
+        builder.Services.AddRazorPages();
 
         builder.Services.AddIdentityServer()
-            .AddInMemoryApiScopes(Config.ApiScopes)
-            .AddInMemoryClients(Config.Clients);
+        .AddInMemoryIdentityResources(Config.IdentityResources)
+        .AddInMemoryApiScopes(Config.ApiScopes)
+        .AddInMemoryClients(Config.Clients);
 
         return builder.Build();
     }
@@ -22,8 +23,8 @@ internal static class HostingExtensions
     public static WebApplication ConfigurePipeline(this WebApplication app)
     { 
         // uncomment if you want to add a UI
-        //app.UseStaticFiles();
-        //app.UseRouting();
+        app.UseStaticFiles();
+        app.UseRouting();
 
         app.UseSerilogRequestLogging();
         if (app.Environment.IsDevelopment())
@@ -33,8 +34,8 @@ internal static class HostingExtensions
         app.UseIdentityServer();
 
         // uncomment, if you want to add a UI
-        //app.UseAuthorization();
-        //app.MapRazorPages().RequireAuthorization();
+        app.UseAuthorization();
+        app.MapRazorPages().RequireAuthorization();
 
         return app;
     }
