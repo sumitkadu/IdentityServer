@@ -10,6 +10,8 @@ internal static class HostingExtensions
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddRazorPages();
+        builder.Services.AddControllers();
+        builder.Services.AddSwaggerGen();
 
         builder.Services.AddIdentityServer()
             .AddInMemoryIdentityResources(Config.IdentityResources)
@@ -52,6 +54,8 @@ internal static class HostingExtensions
         if (app.Environment.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
         app.UseStaticFiles();
