@@ -27,13 +27,20 @@ internal static class HostingExtensions
                 options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
                 options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
             })
+            .AddMicrosoftAccount("Microsoft", options =>
+            {
+                options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+
+                options.ClientId = builder.Configuration["Authentication:Microsoft:ClientId"];
+                options.ClientSecret = builder.Configuration["Authentication:Microsoft:ClientSecret"];
+            })
             .AddOpenIdConnect("oidc", "Demo IdentityServer", options =>
             {
                 options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                 options.SignOutScheme = IdentityServerConstants.SignoutScheme;
                 options.SaveTokens = true;
 
-                options.Authority = "https://demo.duendesoftware.com";
+                options.Authority = "https://theapplabb.com";
                 options.ClientId = "interactive.confidential";
                 options.ClientSecret = "secret";
                 options.ResponseType = "code";

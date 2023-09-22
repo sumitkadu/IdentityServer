@@ -7,3 +7,6 @@ src/Client/bin
 src/Client/obj
 src/WebClient/bin
 src/WebClient/obj
+src/IdentityServer/.azure
+src/WebClient/.azure
+.fake
