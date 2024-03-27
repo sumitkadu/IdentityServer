@@ -40,7 +40,7 @@ internal static class HostingExtensions
                 options.SignOutScheme = IdentityServerConstants.SignoutScheme;
                 options.SaveTokens = true;
 
-                options.Authority = "https://theapplabb.com";
+                options.Authority = "https://localhost:5001/";
                 options.ClientId = "interactive.confidential";
                 options.ClientSecret = "secret";
                 options.ResponseType = "code";
@@ -54,9 +54,9 @@ internal static class HostingExtensions
 
         return builder.Build();
     }
-    
+
     public static WebApplication ConfigurePipeline(this WebApplication app)
-    { 
+    {
         app.UseSerilogRequestLogging();
         if (app.Environment.IsDevelopment())
         {
@@ -67,7 +67,7 @@ internal static class HostingExtensions
 
         app.UseStaticFiles();
         app.UseRouting();
-            
+
         app.UseIdentityServer();
 
         app.UseAuthorization();

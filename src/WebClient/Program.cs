@@ -16,7 +16,7 @@ builder.Services.AddAuthentication(options =>
     .AddCookie("Cookies")
     .AddOpenIdConnect("oidc", options =>
     {
-        options.Authority = "https://talidentityserver.azurewebsites.net";
+        options.Authority = "https://localhost:5001/";
 
         options.ClientId = "web";
         options.ClientSecret = "secret";
@@ -28,7 +28,7 @@ builder.Services.AddAuthentication(options =>
         options.Scope.Add("verification");
         options.ClaimActions.MapJsonKey("email_verified", "email_verified");
         options.GetClaimsFromUserInfoEndpoint = true;
-        
+
         options.SaveTokens = true;
     });
 
