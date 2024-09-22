@@ -8,5 +8,6 @@ src/Client/obj
 src/WebClient/bin
 src/WebClient/obj
 src/IdentityServer/.azure
+src/IdentityServer/keys
 src/WebClient/.azure
 .fake
